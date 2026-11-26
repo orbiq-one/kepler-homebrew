@@ -1,0 +1,42 @@
+{
+  "name": "@kepler-app/homebrew-plugin",
+  "version": "1.0.0",
+  "description": "See outstanding Homebrew updates in Look Ahead and browse outdated formulae and casks.",
+  "type": "module",
+  "keywords": [
+    "kepler",
+    "kepler-plugin",
+    "homebrew",
+    "brew"
+  ],
+  "files": [
+    "dist"
+  ],
+  "kepler": {
+    "apiVersion": 1,
+    "manifest": "dist/manifest.json",
+    "entry": "dist/index.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbiq-one/kepler-homebrew.git"
+  },
+  "homepage": "https://github.com/orbiq-one/kepler-homebrew#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "kepler-plugin bundle src/index.ts --out dist",
+    "install:local": "kepler-plugin bundle src/index.ts --out \"$HOME/Library/Application Support/Kepler/Plugins/homebrew.keplugin\"",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kepler-app/plugin-sdk": "file:../kepler-sdk"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "~5.9.3"
+  }
+}
