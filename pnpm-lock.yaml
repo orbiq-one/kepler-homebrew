@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@kepler-app/plugin-sdk':
-        specifier: file:../kepler-sdk
-        version: file:../kepler-sdk
+        specifier: ^1.3.0
+        version: 1.3.0
     devDependencies:
       tsup:
         specifier: ^8.5.1
@@ -190,8 +190,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@kepler-app/plugin-sdk@file:../kepler-sdk':
-    resolution: {directory: ../kepler-sdk, type: directory}
+  '@kepler-app/plugin-sdk@1.3.0':
+    resolution: {integrity: sha512-B+QUb23tZggLr14OfO51HGlrFycLAqdU53/wL4PgR2Ne0rcb1OWtABqdrOHy5qAlruZPjsQIHjk6NtUBUKxIBQ==}
     hasBin: true
 
   '@rollup/rollup-android-arm-eabi@4.68.8':
@@ -638,7 +638,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.3
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@kepler-app/plugin-sdk@file:../kepler-sdk':
+  '@kepler-app/plugin-sdk@1.3.0':
     dependencies:
       jiti: 2.7.0
 
